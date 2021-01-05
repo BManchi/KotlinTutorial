@@ -1,3 +1,5 @@
+import androidx.core.os.persistableBundleOf
+
 fun main(args: Array<String>) {
     /*println("Hello World")
     println("My first Kotlin program")
@@ -65,7 +67,7 @@ fun main(args: Array<String>) {
 
     println(message)*/
 
-    /*// Classes
+   /* // Classes
 
     val tim = Player("tim")
 //    println(tim.name)
@@ -107,15 +109,57 @@ fun main(args: Array<String>) {
     tim.show()
 
     val redPotion = Loot("Red Potion", LootType.POTION, 7.5)
-    tim.inventory.add(redPotion)
-    tim.inventory.add(Loot("+3 Chest Armor", LootType.ARMOR, 80.00))
+    tim.getLoot(redPotion)
+    tim.getLoot(Loot("+3 Chest Armor", LootType.ARMOR, 80.00))
     tim.showInventory()
 
     println(tim)
 
-    println(tim.inventory)*/
+    println(tim.showInventory())
 
-    for (i in 0 until 10){
-        println("$i squared is ${i * i}")
+    if (tim.dropLoot(redPotion)) {
+        tim.showInventory()
+    } else {
+        println("you don't have ${redPotion.name}")
     }
+
+    val bluePotion = Loot ("Blue potion", LootType.POTION, 6.00)
+
+    if (tim.dropLoot(bluePotion)) {
+        tim.showInventory()
+    }else {
+        println(" You don´t have ${bluePotion.name}")
+    }
+
+    if ( tim.dropLoot("+3 Chest Armor ")){
+        tim.showInventory()
+    } else {
+        println("you don´t have a Chest Armor")
+    }
+
+//    for (i in 10 downTo 0 step 2){
+//        println("$i squared is ${i * i}")
+//    }
+//
+//    for(i in 0 .. 100) {
+//        if ((i % 3 == 0) && (i % 5 == 0)){
+//            println(i)
+//        }
+//    }
+*/
+
+    val enemy = Enemy("test enemy", 10, 3)
+    println(enemy)
+
+    enemy.takeDamage(4)
+    println(enemy)
+
+    enemy.takeDamage(11)
+    println(enemy)
+
+    val uglyTroll = Troll("Ugly Troll")
+    println(uglyTroll)
+    uglyTroll.takeDamage(30)
+    println(uglyTroll)
+
 }
