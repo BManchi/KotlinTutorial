@@ -65,7 +65,7 @@ fun main(args: Array<String>) {
 
     println(message)*/
 
-    // Classes
+    /*// Classes
 
     val tim = Player("tim")
 //    println(tim.name)
@@ -77,10 +77,10 @@ fun main(args: Array<String>) {
     val lou = Player("Lou", 5)
     lou.show()
 
-    var primero = Player("Primero",4, 8)
+    val primero = Player("Primero",4, 8)
     primero.show()
 
-    var segundo = Player("Segundo", 2, 5, 1000)
+    val segundo = Player("Segundo", 2, 5, 1000)
     segundo.show()
     //println(segundo.weapon.name.toUpperCase())
     //println(segundo.weapon.damageInflicted)
@@ -105,4 +105,17 @@ fun main(args: Array<String>) {
     //println(tim.weapon.name)
 
     tim.show()
+
+    val redPotion = Loot("Red Potion", LootType.POTION, 7.5)
+    tim.inventory.add(redPotion)
+    tim.inventory.add(Loot("+3 Chest Armor", LootType.ARMOR, 80.00))
+    tim.showInventory()
+
+    println(tim)
+
+    println(tim.inventory)*/
+
+    for (i in 0 until 10){
+        println("$i squared is ${i * i}")
+    }
 }
