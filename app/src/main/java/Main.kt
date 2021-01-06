@@ -1,5 +1,3 @@
-import androidx.core.os.persistableBundleOf
-
 fun main(args: Array<String>) {
     /*println("Hello World")
     println("My first Kotlin program")
@@ -67,86 +65,86 @@ fun main(args: Array<String>) {
 
     println(message)*/
 
-   /* // Classes
+    /* // Classes
 
-    val tim = Player("tim")
-//    println(tim.name)
-//    println(tim.lives)
-//    println(tim.level)
-//    println(tim.score)
-    tim.show()
+     val tim = Player("tim")
+ //    println(tim.name)
+ //    println(tim.lives)
+ //    println(tim.level)
+ //    println(tim.score)
+     tim.show()
 
-    val lou = Player("Lou", 5)
-    lou.show()
+     val lou = Player("Lou", 5)
+     lou.show()
 
-    val primero = Player("Primero",4, 8)
-    primero.show()
+     val primero = Player("Primero",4, 8)
+     primero.show()
 
-    val segundo = Player("Segundo", 2, 5, 1000)
-    segundo.show()
-    //println(segundo.weapon.name.toUpperCase())
-    //println(segundo.weapon.damageInflicted)
+     val segundo = Player("Segundo", 2, 5, 1000)
+     segundo.show()
+     //println(segundo.weapon.name.toUpperCase())
+     //println(segundo.weapon.damageInflicted)
 
-    val axe = Weapon("Axe", 12)
-    primero.weapon = axe
+     val axe = Weapon("Axe", 12)
+     primero.weapon = axe
 
-    //println(primero.weapon.name)
-    //println(primero.weapon.damageInflicted)
+     //println(primero.weapon.name)
+     //println(primero.weapon.damageInflicted)
 
-    val sword = Weapon("Sword", 10)
+     val sword = Weapon("Sword", 10)
 
-    tim.weapon = sword
-    tim.show()
+     tim.weapon = sword
+     tim.show()
 
-    //lou.weapon = sword
-    lou.weapon = tim.weapon
-    lou.show()
-    tim.show()
-    //println(tim.weapon.name)
-    tim.weapon = Weapon("Spear", 14)
-    //println(tim.weapon.name)
+     //lou.weapon = sword
+     lou.weapon = tim.weapon
+     lou.show()
+     tim.show()
+     //println(tim.weapon.name)
+     tim.weapon = Weapon("Spear", 14)
+     //println(tim.weapon.name)
 
-    tim.show()
+     tim.show()
 
-    val redPotion = Loot("Red Potion", LootType.POTION, 7.5)
-    tim.getLoot(redPotion)
-    tim.getLoot(Loot("+3 Chest Armor", LootType.ARMOR, 80.00))
-    tim.showInventory()
+     val redPotion = Loot("Red Potion", LootType.POTION, 7.5)
+     tim.getLoot(redPotion)
+     tim.getLoot(Loot("+3 Chest Armor", LootType.ARMOR, 80.00))
+     tim.showInventory()
 
-    println(tim)
+     println(tim)
 
-    println(tim.showInventory())
+     println(tim.showInventory())
 
-    if (tim.dropLoot(redPotion)) {
-        tim.showInventory()
-    } else {
-        println("you don't have ${redPotion.name}")
-    }
+     if (tim.dropLoot(redPotion)) {
+         tim.showInventory()
+     } else {
+         println("you don't have ${redPotion.name}")
+     }
 
-    val bluePotion = Loot ("Blue potion", LootType.POTION, 6.00)
+     val bluePotion = Loot ("Blue potion", LootType.POTION, 6.00)
 
-    if (tim.dropLoot(bluePotion)) {
-        tim.showInventory()
-    }else {
-        println(" You don´t have ${bluePotion.name}")
-    }
+     if (tim.dropLoot(bluePotion)) {
+         tim.showInventory()
+     }else {
+         println(" You don´t have ${bluePotion.name}")
+     }
 
-    if ( tim.dropLoot("+3 Chest Armor ")){
-        tim.showInventory()
-    } else {
-        println("you don´t have a Chest Armor")
-    }
+     if ( tim.dropLoot("+3 Chest Armor ")){
+         tim.showInventory()
+     } else {
+         println("you don´t have a Chest Armor")
+     }
 
-//    for (i in 10 downTo 0 step 2){
-//        println("$i squared is ${i * i}")
-//    }
-//
-//    for(i in 0 .. 100) {
-//        if ((i % 3 == 0) && (i % 5 == 0)){
-//            println(i)
-//        }
-//    }
-*/
+ //    for (i in 10 downTo 0 step 2){
+ //        println("$i squared is ${i * i}")
+ //    }
+ //
+ //    for(i in 0 .. 100) {
+ //        if ((i % 3 == 0) && (i % 5 == 0)){
+ //            println(i)
+ //        }
+ //    }
+ */
 
     // Inheritance
 //    val enemy = Enemy("test enemy", 10, 3)
@@ -170,30 +168,40 @@ fun main(args: Array<String>) {
 //
 
 
-    for (i in 1 .. 10){
-        val dracula = VampireKing("Dracula")
-        println(dracula)
+//    for (i in 1 .. 10){
+//    val dracula = VampireKing("Dracula")
+//    println(dracula)
+//
+//    dracula.lives = 0
+//
+//    do  {
+//        if (dracula.dodges()) {
+//            dracula.lives +=1
+//            continue
+//        }
+//        if (dracula.runaway()) {
+//            println("Dracula ran away")
+//            break
+//        } else {
+//            dracula.takeDamage(80)
+//            println(dracula)
+//        }
+//    } while (dracula.lives > 0)
+//    println("=================")
+//    }
 
-        while (dracula.lives > 0) {
-            if (dracula.dodges()) {
-                continue
-            }
-            if (dracula.runaway()) {
-                println("Dracula ran away")
-                break
-            } else {
-                dracula.takeDamage(80)
-                println(dracula)
-            }
-        }
-        println("=================")
-    }
+    val conan = Player("Conan")
+    conan.getLoot(Loot("Invisibility", LootType.POTION, 4.0))
+    conan.getLoot(Loot("Mitrhil", LootType.ARMOR, 103.0))
+    conan.getLoot(Loot("Ring of Speed", LootType.RING, 25.0))
+    conan.getLoot(Loot("Ring of Speed", LootType.RING, 25.0))
+    conan.getLoot(Loot("Red potion", LootType.POTION, 2.0))
+    conan.getLoot(Loot("Red potion", LootType.POTION, 2.0))
+    conan.getLoot(Loot("Red potion", LootType.POTION, 2.0))
+    conan.getLoot(Loot("Cursed Shield", LootType.ARMOR, -8.0))
+    conan.showInventory()
 
-//    val conan = Player("Conan")
-//    conan.getLoot(Loot("Invisibility", LootType.POTION, 4.0))
-//    conan.getLoot(Loot("Mitrhil", LootType.ARMOR, 103.0))
-//    conan.getLoot(Loot("Ring of Speed", LootType.RING, 25.0))
-//    conan.getLoot(Loot("Red potion", LootType.POTION, 2.0))
-//    conan.getLoot(Loot("Cursed Shield", LootType.ARMOR, -8.0))
-//    conan.showInventory()
+    conan.dropLoot("Red potion")
+    conan.showInventory()
+    conan.dropLoot("Yerba Mate")
 }
